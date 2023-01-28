@@ -1,5 +1,5 @@
 FROM archlinux:latest
-LABEL maintainer "Chris Zervakis"
+LABEL maintainer "SearxGuy"
 
 # Avoid things that systemd does on actual hardware.
 ENV container docker
@@ -21,7 +21,6 @@ RUN pacman -Sy --noconfirm \
 
 RUN pacman -S --noconfirm \
     which \
-    vim \
     ansible \
 && yes | pacman -Scc
 
